@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('howdoyoudo', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -17,3 +17,20 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+.controller('howdoyoudoCtrl', function($scope) {
+	
+   $scope.hdyd_date = new Date();
+   $scope.smiliesList = [
+	{ smile_icon: "hier wird das Icon angezeigt" , value:"very very well", selected: false},
+    { smile_icon: "hier wird das Icon angezeigt" , value:"very well", selected: false},
+    { smile_icon: "hier wird das Icon angezeigt" , value:"well", selected: true},
+    { smile_icon: "hier wird das Icon angezeigt" , value:"don't know", selected: false},
+    { smile_icon: "hier wird das Icon angezeigt" , value:"bad" , selected: false},
+    { smile_icon: "hier wird das Icon angezeigt" , value:"very bad", selected: false},
+    { smile_icon: "hier wird das Icon angezeigt" , value:"very very bad", selected: false}
+  ];
+
+   $scope.data = {
+	        clientSide: 'well'
+	    };
+});
