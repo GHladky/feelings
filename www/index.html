@@ -26,7 +26,11 @@
       </ion-header-bar>
       <ion-content>
       <div class="list">
-        <input type="date" id="hdyd_date"  ng-model="hdyd_date"    />
+      <label class="item item-input">
+          <span class="input-label">Datum: </span>
+         <input type="date" id="hdyd_date"  ng-model="hdyd_date"    />
+        </label>
+        
         <ion-radio ng-repeat="item in smiliesList"
                    ng-value="item.value"
                    ng-checked="item.selected"
